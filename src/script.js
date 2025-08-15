@@ -7,3 +7,5 @@ document.querySelectorAll('.tech-grid span').forEach(el => {
         el.style.transform = 'scale(1)';
     });
 });
+
+document.querySelector()

@@ -1,65 +1,118 @@
-body {
-    font-family: Arial, sans-serif;
+/* =====================
+   Reset básico
+===================== */
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
-    background-color: #0d1117;
-    color: #c9d1d9;
+    padding: 0;
 }
 
-a {
-    color: #58a6ff;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
+body {
+    font-family: 'Fredoka', sans-serif;
 }
 
-header {
+/* =====================
+   Fondo de video
+===================== */
+#bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* =====================
+   Body y layout
+===================== */
+body {
+    font-family: 'Fredoka', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+    background: #000; /* fallback si no carga el video */
+}
+
+/* =====================
+   Caja principal tipo tarjeta
+===================== */
+header, section, footer {
     text-align: center;
-    padding: 2rem;
-    background-color: #161b22;
 }
+
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 .descripcion {
-    font-size: 1.2rem;
-    color: #8b949e;
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 1.5rem;
 }
 
+.card {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+/* =====================
+   Tecnologías
+===================== */
 #tecnologias {
-    padding: 2rem;
+    margin-bottom: 1.5rem;
 }
 .tech-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
+    gap: 0.5rem;
 }
 .tech-grid span {
-    background-color: #21262d;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: background-color 0.3s;
-}
-.tech-grid span:hover {
-    background-color: #30363d;
+    background: rgba(255,255,255,0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
 }
 
-/* Proyectos */
+/* =====================
+   Proyectos
+===================== */
 #proyectos {
-    padding: 2rem;
+    margin-bottom: 1.5rem;
 }
 #proyectos ul {
     list-style: none;
-    padding: 0;
 }
 #proyectos li {
-    margin-bottom: 10px;
+    margin: 0.5rem 0;
+}
+#proyectos a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+#proyectos a:hover {
+    text-decoration: underline;
 }
 
-/* Footer */
+/* =====================
+   Footer
+===================== */
 footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #161b22;
-    color: #8b949e;
+    font-size: 0.85rem;
+    color: #bbb;
+}
+footer a {
+    color: #58a6ff;
+    text-decoration: underline;
 }
